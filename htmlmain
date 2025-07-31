@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GradeCalc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📊 GradeCalc</h1>
 
+    <div class="form-group">
+      <input type="text" id="assignmentName" placeholder="Assignment name">
+      <input type="number" id="score" placeholder="Score (%)" min="0" max="100">
+      <input type="number" id="weight" placeholder="Weight (%)" min="0">
+      <button onclick="addAssignment()">Add</button>
+    </div>
+
+    <table id="assignmentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Weight</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="buttons">
+      <button onclick="calculateFinal()">📈 Calculate Final Grade</button>
+      <button onclick="resetAll()">🔁 Reset</button>
+    </div>
+
+    <h2 id="resultText">Your final grade will appear here.</h2>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
